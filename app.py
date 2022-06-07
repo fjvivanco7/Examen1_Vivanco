@@ -14,3 +14,21 @@ def index():
 #Metodo para correr la aplicacion
 if __name__ == '__main__':
     app.run(debug=True)
+
+def __is_holiday(self, date, online):
+        """
+        Checks if date (in ISO 8601 format YYYY-MM-DD) is a public holiday in Ecuador
+        if online == True it will use a REST API, otherwise it will generate the holidays of the examined year
+        
+        Parameters
+        ----------
+        date : str
+            It is following the ISO 8601 format YYYY-MM-DD: e.g., 2020-04-22
+        online: boolean, optional
+            if online == True the abstract public holidays API will be used        
+        Returns
+        -------
+        Returns True if the checked date (in ISO 8601 format YYYY-MM-DD) is a public holiday in Ecuador, otherwise False
+        """            
+        y, m, d = date.split('-')
+        
